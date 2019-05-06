@@ -1,5 +1,5 @@
 #!/usr/src/Python-3.7.2/python
-user = { 'admin': True, 'active': '', 'name': 'Abhishek'}
+user = { 'admin': True, 'active': True, 'name': 'Abhishek'}
 prefix = ""
 
 if user['active'] and user['admin']:
