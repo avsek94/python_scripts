@@ -1,0 +1,28 @@
+#!/usr/src/Python-3.7.2/python
+users = [
+          {'admin':True, 'active': True, 'name': 'Abhishek'}
+          {'admin':True, 'active': "", 'name': 'Amir'}
+          {'admin':True, 'active': True, 'name': 'Neli'}
+          {'admin':"", 'active': True, 'name': 'Ashish'}
+          {'admin':True, 'active': True, 'name': 'Laxmi'}
+          {'admin':True, 'active': "", 'name': 'Rajesh'}
+          {'admin':"", 'active': True, 'name': 'Sunita'}
+]
+
+line = 1
+
+for user in users:
+    prefix = f"{line} "
+
+    if user['admin'] and user['active']:
+        prefix += "ACTIVE - (ADMIN) "
+
+    elif user['admin']:
+        prefix += "Inactive - (ADMIN) "
+
+    elif user['active']:
+        prefix += "ACTIVE - (NON-ADMIN)"
+
+    print(prefix + user['name'])
+    line +=1
+
